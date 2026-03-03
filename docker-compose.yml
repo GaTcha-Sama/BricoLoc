@@ -1,0 +1,7 @@
+services:
+  inventory-service:
+    build:
+      context: ./inventory-service
+      dockerfile: Dockerfile
+    ports:
+      - "7000:7000"
