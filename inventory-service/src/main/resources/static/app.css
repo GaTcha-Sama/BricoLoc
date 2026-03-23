@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #193049;
+}
+
+.container {
+  max-width: 840px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: min(100%, 460px);
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin: 16px 0 8px;
+  color: #1b6db0;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #d4ddeb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 15px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  color: #fff;
+  background: #1b6db0;
+  font-weight: 700;
+}
+
+button#btnReserve {
+  background: #ee8a22;
+}
+
+pre {
+  white-space: pre-wrap;
+  background: #0f2438;
+  color: #f3f6fb;
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 120px;
+}

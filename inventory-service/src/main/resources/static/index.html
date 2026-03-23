@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BricoLoc - Stock outils</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <img
+        class="logo"
+        src="/assets/bricoloc-logo.svg"
+        alt="Logo BricoLoc"
+      >
+      <h1>BricoLoc</h1>
+      <p>Interface locale de consultation et reservation de stock.</p>
+    </header>
+
+    <section class="card">
+      <label for="toolRef">Reference outil</label>
+      <input id="toolRef" type="text" value="PERCEUSE-PRO" placeholder="Ex: PERCEUSE-PRO">
+
+      <div class="actions">
+        <button id="btnGet" type="button">Verifier le stock (GET)</button>
+        <button id="btnReserve" type="button">Reserver l'outil (POST)</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Resultat</h2>
+      <pre id="result">Pret.</pre>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
