@@ -7,32 +7,275 @@
   <link rel="stylesheet" href="/app.css">
 </head>
 <body>
-  <main class="container">
-    <header class="hero">
-      <img
-        class="logo"
-        src="/assets/bricoloc-logo.svg"
-        alt="Logo BricoLoc"
-      >
-      <h1>BricoLoc</h1>
-      <p>Interface locale de consultation et reservation de stock.</p>
-    </header>
+  <a class="skip-link" href="#main">Aller au contenu</a>
 
-    <section class="card">
-      <label for="toolRef">Référence outil</label>
-      <input id="toolRef" type="text" value="PERCEUSE-PRO" placeholder="Ex: PERCEUSE-PRO">
+  <header class="topbar" role="banner">
+    <div class="topbar__inner">
+      <div class="brand">
+        <img class="brand__logo" src="/assets/bricoloc-logo.svg" alt="Logo BricoLoc">
+        <div class="brand__text">
+          <div class="brand__name">BricoLoc</div>
+          <div class="brand__tagline">Location d’outils pour pros & particuliers — simple, rapide, fiable</div>
+        </div>
+      </div>
+      <div class="topbar__meta" aria-label="Informations">
+        <nav class="nav" aria-label="Navigation principale">
+          <a class="nav__link" href="#offre">Offre</a>
+          <a class="nav__link" href="#comment">Comment ça marche</a>
+          <a class="nav__link" href="#poc">Espace démo</a>
+          <a class="nav__link" href="#faq">FAQ</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-      <div class="actions">
-        <button id="btnGet" type="button">Vérifier le stock (GET)</button>
-        <button id="btnReserve" type="button">Réserver l'outil (POST)</button>
+  <main id="main" class="container">
+    <section class="heroPro" aria-label="Accueil">
+      <div class="heroPro__grid">
+        <div class="heroPro__copy">
+          <div class="eyebrow">
+            <span class="pill pill--soft">Livraison & retrait en agence</span>
+            <span class="pill">Support 7j/7</span>
+          </div>
+          <h1 class="heroPro__title">Louez le bon outil, au bon moment.</h1>
+          <p class="heroPro__lead">
+            BricoLoc simplifie la location d’outils: disponibilité en temps réel, réservation immédiate et
+            une expérience pensée pour les chantiers comme pour les petits travaux à la maison.
+          </p>
+          <div class="heroPro__cta">
+            <a class="btnLink btnLink--primary" href="#poc">Tester la démo stock</a>
+            <a class="btnLink btnLink--ghost" href="#offre">Découvrir notre offre</a>
+          </div>
+          <div class="heroPro__trust" aria-label="Chiffres clés">
+            <div class="kpi">
+              <div class="kpi__value">+120</div>
+              <div class="kpi__label">références d’outils</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi__value">15 min</div>
+              <div class="kpi__label">de retrait moyen</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi__value">4,8/5</div>
+              <div class="kpi__label">satisfaction</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="heroPro__panel" aria-label="Aperçu">
+          <div class="panelCard">
+            <div class="panelCard__title">Disponibilité en temps réel</div>
+            <div class="panelCard__text">
+              Consultez le stock en live, réservez en un clic, et partez avec l’outil prêt à l’emploi.
+            </div>
+            <div class="panelCard__list" aria-label="Avantages">
+              <div class="check">Réservation immédiate</div>
+              <div class="check">Prix transparent</div>
+              <div class="check">Matériel entretenu</div>
+            </div>
+            <div class="panelCard__meta">
+              <span class="pill">Bleu BricoLoc</span>
+              <span class="pill pill--soft">Orange Réservation</span>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section class="card">
-      <h2>Resultat</h2>
-      <pre id="result">Pret.</pre>
+    <section id="offre" class="section">
+      <div class="section__header">
+        <h2 class="section__title">Une offre pensée pour le terrain</h2>
+        <p class="section__subtitle">Du perçage au jardinage, louez l’outil adapté, au bon tarif, pour la bonne durée.</p>
+      </div>
+
+      <div class="featureGrid">
+        <article class="featureCard">
+          <div class="featureCard__title">Qualité pro</div>
+          <p class="featureCard__text">Sélection d’outillage robuste, contrôlé et entretenu entre chaque location.</p>
+        </article>
+        <article class="featureCard">
+          <div class="featureCard__title">Réservation instantanée</div>
+          <p class="featureCard__text">Disponibilité et décrémentation de stock en temps réel pour éviter les mauvaises surprises.</p>
+        </article>
+        <article class="featureCard">
+          <div class="featureCard__title">Paiement & contrat simplifiés</div>
+          <p class="featureCard__text">Tout est clair: durée, caution, assurance. Vous gagnez du temps, dès la première location.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="comment" class="section section--alt">
+      <div class="section__header">
+        <h2 class="section__title">Comment ça marche</h2>
+        <p class="section__subtitle">Trois étapes, une expérience fluide — comme un vrai service de location.</p>
+      </div>
+
+      <ol class="steps" aria-label="Étapes">
+        <li class="step">
+          <div class="step__title">Cherchez</div>
+          <div class="step__text">Trouvez l’outil et la durée. Vérifiez la disponibilité en quelques secondes.</div>
+        </li>
+        <li class="step">
+          <div class="step__title">Réservez</div>
+          <div class="step__text">Validez la réservation: le stock est mis à jour immédiatement.</div>
+        </li>
+        <li class="step">
+          <div class="step__title">Retirez & démarrez</div>
+          <div class="step__text">Retrait en agence ou livraison. L’outil est prêt, vous aussi.</div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="poc" class="section">
+      <div class="section__header">
+        <h2 class="section__title">Espace démo (POC)</h2>
+        <p class="section__subtitle">
+          Cette zone conserve votre POC: une mini interface qui appelle l’API stock.
+          <span class="inlinePills">
+            <span class="pill">API: <code>/api/stocks</code></span>
+            <span class="pill pill--soft">Astuce: Entrée = GET • Ctrl+Entrée = POST</span>
+          </span>
+        </p>
+      </div>
+
+      <section class="layout">
+        <section class="card card--form" aria-label="Actions">
+          <div class="card__header">
+            <h3 class="card__title">Consulter & réserver</h3>
+            <p class="card__subtitle">Saisissez une référence (ex: <code>PONCEUSE-B300</code>), puis lancez une action.</p>
+          </div>
+
+          <div class="field">
+            <label for="toolRef">Référence outil</label>
+            <div class="field__row">
+              <input
+                id="toolRef"
+                class="input"
+                type="text"
+                value="PONCEUSE-B300"
+                placeholder="Ex: PONCEUSE-B300"
+                autocomplete="off"
+                spellcheck="false"
+                inputmode="text"
+              >
+            </div>
+            <div class="chips" aria-label="Références rapides">
+              <button class="chip" type="button" data-ref="PERCEUSE-PHILIPS">PERCEUSE-PHILIPS</button>
+              <button class="chip" type="button" data-ref="PONCEUSE-B300">PONCEUSE-B300</button>
+              <button class="chip" type="button" data-ref="VISSEUSE-BOSCH">VISSEUSE-BOSCH</button>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button id="btnGet" class="btn btn--primary" type="button">
+              <span class="btn__label">Vérifier le stock</span>
+              <span class="btn__hint">GET</span>
+            </button>
+            <button id="btnReserve" class="btn btn--warning" type="button">
+              <span class="btn__label">Réserver l'outil</span>
+              <span class="btn__hint">POST</span>
+            </button>
+          </div>
+
+          <div class="callout" role="note">
+            <div class="callout__title">Ce que démontre le POC</div>
+            <ul class="callout__list">
+              <li>Lecture temps réel via <code>GET /api/stocks/&lt;ref&gt;</code></li>
+              <li>Réservation via <code>POST /api/stocks/&lt;ref&gt;/reserve</code> (décrément immédiat)</li>
+              <li>Gestion des cas: introuvable (404), rupture (409), succès</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card card--result" aria-label="Résultat">
+          <div class="card__header card__header--row">
+            <h3 class="card__title">Résultat</h3>
+            <div id="statusPill" class="pill pill--soft" aria-live="polite">Prêt</div>
+          </div>
+
+          <div class="result" role="region" aria-live="polite" aria-label="Sortie">
+            <pre id="result" class="result__pre">Prêt.</pre>
+          </div>
+
+          <div class="result__footer">
+            <span class="muted">Conseil: si vous obtenez une erreur réseau, vérifiez que le service tourne et que le port est accessible.</span>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <section id="faq" class="section section--alt">
+      <div class="section__header">
+        <h2 class="section__title">FAQ</h2>
+        <p class="section__subtitle">Quelques réponses rapides, comme sur un vrai site de location.</p>
+      </div>
+
+      <div class="faqGrid">
+        <details class="faq">
+          <summary class="faq__q">Qu’est-ce qui est inclus dans la location ?</summary>
+          <div class="faq__a">L’outil, les accessoires essentiels selon la référence, et un matériel contrôlé avant remise.</div>
+        </details>
+        <details class="faq">
+          <summary class="faq__q">Puis-je réserver pour aujourd’hui ?</summary>
+          <div class="faq__a">Oui, si le stock est disponible. La réservation est confirmée instantanément.</div>
+        </details>
+        <details class="faq">
+          <summary class="faq__q">Comment gérez-vous les ruptures ?</summary>
+          <div class="faq__a">Lorsque le stock est à zéro, la réservation renvoie un conflit (409) pour éviter toute sur-réservation.</div>
+        </details>
+        <details class="faq">
+          <summary class="faq__q">C’est un site final ?</summary>
+          <div class="faq__a">C’est une page de démonstration front (POC) connectée à un mini service d’inventaire.</div>
+        </details>
+      </div>
+    </section>
+
+    <section class="ctaBand" aria-label="Appel à l’action">
+      <div class="ctaBand__inner">
+        <div>
+          <div class="ctaBand__title">Prêt à louer votre prochain outil ?</div>
+          <div class="ctaBand__text">Simulez une consultation de stock, puis une réservation, directement dans la démo.</div>
+        </div>
+        <div class="ctaBand__actions">
+          <a class="btnLink btnLink--primary" href="#poc">Accéder à la démo</a>
+          <a class="btnLink btnLink--ghost" href="#offre">Voir les avantages</a>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__name">BricoLoc</div>
+        <div class="footer__desc">
+          Démo front-end pour un service de location d’outils.
+          Palette conservée (bleu/orange) et intégration POC stock.
+        </div>
+      </div>
+
+      <div class="footer__cols" aria-label="Liens">
+        <div class="footer__col">
+          <div class="footer__title">Produit</div>
+          <a class="footer__link" href="#offre">Offre</a>
+          <a class="footer__link" href="#comment">Fonctionnement</a>
+          <a class="footer__link" href="#poc">Démo</a>
+        </div>
+        <div class="footer__col">
+          <div class="footer__title">Support</div>
+          <span class="footer__text">Documentation interne</span>
+          <span class="footer__text">Contact agence</span>
+          <span class="footer__text">Conditions</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> BricoLoc — Tous droits réservés.</span>
+      <span class="footer__sep">•</span>
+      <span class="footer__muted">POC: inventaire temps réel</span>
+    </div>
+  </footer>
 
   <script src="/app.js"></script>
 </body>
